@@ -1,0 +1,9 @@
+package com.bignerdranch.android.geoquiz;
+
+/**
+ * Encapsulates a single True-False question.
+ */
+public class TrueFalse {
+
+	
+}

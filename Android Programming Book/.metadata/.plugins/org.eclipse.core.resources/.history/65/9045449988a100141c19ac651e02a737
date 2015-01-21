@@ -1,0 +1,15 @@
+package com.bignerdranch.android.geoquiz;
+
+/**
+ * Encapsulates a single True-False question.
+ */
+public class TrueFalse {
+	private int mQuestion; // holds the res ID of the string for the question
+	
+	private boolean mTrueQuestion; // indicates whether the statement is True
+	
+	public TrueFalse(int question, boolean trueQuestion) {
+		mQuestion = question;
+		mTrueQuestion = trueQuestion;
+	}
+}

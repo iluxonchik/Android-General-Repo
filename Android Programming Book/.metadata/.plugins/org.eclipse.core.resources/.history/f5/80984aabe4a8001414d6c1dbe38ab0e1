@@ -21,15 +21,6 @@ public class CrimeActivity extends FragmentActivity {
 			fm.beginTransaction()
 				.add(R.id.fragmentContainer, fragment)
 				.commit();
-			
-			/* Fragment transactions are used to add, remove, attach, detach, or
-			 * replace fragments in the fragment list.
-			 *  The code above says: "Create a new fragment transaction
-			 *  (.beginTransaction()), include one add operation and then
-			 *  commit it.
-			 *  
-			 *  -> The FragmentTransaction class uses a fluid interface.
-			 */
 		}
 	}
 

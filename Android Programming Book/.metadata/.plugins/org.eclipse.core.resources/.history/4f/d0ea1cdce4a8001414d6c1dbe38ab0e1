@@ -27,8 +27,6 @@ public class CrimeActivity extends FragmentActivity {
 			 *  The code above says: "Create a new fragment transaction
 			 *  (.beginTransaction()), include one add operation and then
 			 *  commit it.
-			 *  
-			 *  -> The FragmentTransaction class uses a fluid interface.
 			 */
 		}
 	}

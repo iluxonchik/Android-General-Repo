@@ -5,13 +5,22 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 
-public class CrimeActivity extends FragmentActivity {
+public class CrimeActivity extends SingleFragmentActivity {
 
-	/* Called when the activity is first created */
+	@Override
+	protected Fragment createFragment() {
+		return new CrimeFragment();
+	}
+
+	
+	
+	
+	/* 
+	// Called when the activity is first created
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_crime);
+		setContentView(R.layout.activity_fragment);
 		
 		FragmentManager fm =  getSupportFragmentManager();
 		Fragment fragment = fm.findFragmentById(R.id.fragmentContainer);
@@ -20,8 +29,8 @@ public class CrimeActivity extends FragmentActivity {
 			fragment = new CrimeFragment();
 			fm.beginTransaction()
 				.add(R.id.fragmentContainer, fragment)
-				.commit();
-			
+				.commit(); */	
+		
 			/* Fragment transactions are used to add, remove, attach, detach, or
 			 * replace fragments in the fragment list.
 			 *  The code above says: "Create a new fragment transaction
@@ -30,9 +39,10 @@ public class CrimeActivity extends FragmentActivity {
 			 *  
 			 *  -> The FragmentTransaction class uses a fluid interface.
 			 */
-		}
+	
+/*		}
 	}
-
+*/
 	
 	
 	/*

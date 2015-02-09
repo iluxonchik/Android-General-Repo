@@ -1,0 +1,22 @@
+package com.bignerdranch.android.criminalintent;
+
+import android.content.Context;
+
+public class CrimeLab {
+	
+	private static CrimeLab sCrimeLab; // "s" prefix symbolises 'static'
+	private Context mAppContext;
+	
+	private CrimeLab(Context appContext) {
+		mAppContext = appContext;
+	}
+	
+	public static CrimeLab get(Context c) {
+		if (sCrimeLab == null) {
+			sCrimeLab = new CrimeLab(c.getApplicationContext());
+		}
+		return sCrimeLab;
+	}
+}
+
+/* NOTES */

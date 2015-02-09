@@ -1,0 +1,6 @@
+package com.bignerdranch.android.criminalintent;
+
+public class CrimeLab {
+	
+	private static CrimeLab sCrimeLab;
+}

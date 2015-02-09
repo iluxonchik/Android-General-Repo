@@ -17,6 +17,14 @@ public class CrimeListFragment extends ListFragment {
 	private static final String TAG = "CrimeListFragment";
 	
 	private ArrayList<Crime> mCrimes;
+	
+	@Override
+	public void onResume() {
+		super.onResume();
+		// Notifies the attached observers that the underlying data has been changed 
+		// and any View reflecting the data set should refresh itself.
+		((CrimeAdapter)getListAdapter()).notifyDataSetChanged();
+	}
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

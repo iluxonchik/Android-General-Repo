@@ -1,0 +1,51 @@
+package com.bignerdranch.android.criminalintent;
+
+import java.util.Calendar;
+
+import android.app.Dialog;
+import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
+import android.view.View;
+import android.widget.TimePicker;
+
+public class TimePickerFragment extends DialogFragment {
+
+	Calendar mCal;
+
+	private static final String EXTRA_TIME = 
+			"com.bignerdranch.criminalintent.time";
+	
+	public static TimePickerFragment newInstance(Calendar cal) {
+		Bundle args = new Bundle();
+		args.putSerializable(EXTRA_TIME, cal);
+		
+		TimePickerFragment fragment = new TimePickerFragment();
+		fragment.setArguments(args);
+		
+		return fragment;
+	}
+	
+	@Override
+	public Dialog onCreateDialog(Bundle savedStateInstance) {
+		mCal = (Calendar)getArguments().getSerializable(EXTRA_TIME);
+		
+		View v = getActivity().getLayoutInflater().inflate(R.layout.dialog_time, null);
+		
+		TimePicker tp = (TimePicker)v.findViewById(R.id.dialog_time_timePicker);
+		tp.setCurrentHour(mCal.get(Calendar.HOUR));
+		tp.setCurrentMinute(mCal.get(Calendar.MINUTE));
+		
+		tp.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
+			
+			@Override
+			public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
+				Calendar newCal = Calendar.getInstance();
+				mCal.set(mCal.get(Calendar.YEAR), mCal.get(Calendar.MONTH), mCal.get(Calendar.DAY_OF_MONTH),
+						hourOfDay, minute);
+				
+				
+			}
+		});
+		
+	}
+}

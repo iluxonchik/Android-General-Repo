@@ -1,0 +1,14 @@
+package com.bignerdranch.android.criminalintent;
+
+import java.util.Calendar;
+
+import android.support.v4.app.DialogFragment;
+
+public class TimePickerFragment extends DialogFragment {
+
+	Calendar cal;
+	
+	public static TimePickerFragment newInstance(Calendar cal) {
+		Bundle args = new Bundle();
+	}
+}

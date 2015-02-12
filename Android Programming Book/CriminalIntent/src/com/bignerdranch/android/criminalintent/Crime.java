@@ -1,5 +1,6 @@
 package com.bignerdranch.android.criminalintent;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
 
@@ -9,7 +10,13 @@ public class Crime {
 	private String mTitle;
 	private Date mDate;
 	private boolean mSolved;
-	
+
+	@SuppressWarnings("deprecation")
+	public void setTime(int hours, int minutes) {
+		mDate.setHours(hours);
+		mDate.setMinutes(minutes);
+	}
+
 	public Crime() {
 		// Generate a unique identifier
 		mId = UUID.randomUUID();

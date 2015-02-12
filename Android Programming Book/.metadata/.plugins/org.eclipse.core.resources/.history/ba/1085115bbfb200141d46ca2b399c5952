@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TimePicker
+    android:id="@+id/dialog_time_timePicker"
+    />

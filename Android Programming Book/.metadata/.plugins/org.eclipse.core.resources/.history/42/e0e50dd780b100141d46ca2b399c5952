@@ -1,0 +1,47 @@
+package com.bignerdranch.android.criminalintent;
+
+import java.util.Date;
+
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
+import android.view.View;
+
+public class DatePickerFragment extends DialogFragment {
+	public static final String EXTRA_DATE = 
+			"com.bigneranch.android.criminalintent.date";
+	
+	private Date mDate;
+	
+	public static DatePickerFragment newInstance(Date date) {
+		Bundle args = new Bundle();
+		args.putSerializable(EXTRA_DATE, date);
+		
+		DatePickerFragment fragment = new DatePickerFragment();
+		fragment.setArguments(args);
+		
+		return fragment;
+	}
+	
+	@Override
+	public Dialog onCreateDialog(Bundle savedInstanceState) {
+		/*
+		 * 1. Inflate view with the designed XML.
+		 * Now this view is the design that we chose with XML
+		 * 2. Place that inflated view into an Alert Dialog [.setView(v)]
+		 * Now inside of that dialog, there will be a custom view.
+		 */
+		View v = getActivity().getLayoutInflater().inflate(R.layout.dialog_date, null);
+		/*
+		 * ^ It wouldn't make sense to pass R.id.dialog_date_datePicker to the .inflate(),
+		 *   since it's referring to the date picker ITSELF and not it's DESIGN.
+		 */
+		
+		return new AlertDialog.Builder(getActivity())
+		.setView(v)
+		.setTitle(R.string.date_picker_title)
+		.setPositiveButton(android.R.string.ok, null) // "null" because we don't want a listener
+		.create();									  // attached to the positive button.
+	}
+}

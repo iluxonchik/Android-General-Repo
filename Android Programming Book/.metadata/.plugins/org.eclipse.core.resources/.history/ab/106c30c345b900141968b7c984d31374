@@ -1,0 +1,12 @@
+package com.bignerdranch.android.hellomoon;
+
+public class AudioPlayer {
+
+	private MediaPlayer mPlayer;
+	
+	public void stop() {
+		if (mPlayer != null) {
+			mPlayer
+		}
+	}
+}

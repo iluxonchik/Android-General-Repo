@@ -1,0 +1,14 @@
+package com.bignerdranch.android.hellomoon;
+
+import android.support.v4.app.Fragment;
+import android.widget.Button;
+
+public class HelloMoonFragment extends Fragment {
+
+	private Button mPlayButton;
+	private Button mStopButton;
+	
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup parent,
+			Bundle savedInstanceState) {
+}

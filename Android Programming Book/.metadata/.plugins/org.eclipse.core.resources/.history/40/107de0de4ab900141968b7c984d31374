@@ -27,7 +27,7 @@ public class AudioPlayer {
 		}
 		
 		mPlayer.start();
-		mPlayerIsPaused = false;
+		mPlayerIsPaused = false
 		
 		mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 			

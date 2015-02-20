@@ -19,15 +19,12 @@ public class AudioPlayer {
 	public void play(Context c) {
 		// prevent creation of multiple MPs if the user clicks "Play"
 		// multiple times.
-		if(!mPlayerIsPaused) {
-			stop();
-			
-			// the method below needs context to make sense of the resource ID
-			mPlayer = MediaPlayer.create(c, R.raw.one_small_step);
-		}
-		
-		mPlayer.start();
 		mPlayerIsPaused = false;
+		stop();
+		
+		// the method below needs context to make sense of the resource ID
+		mPlayer = MediaPlayer.create(c, R.raw.one_small_step);
+		mPlayer.start();
 		
 		mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 			

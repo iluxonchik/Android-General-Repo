@@ -3,7 +3,6 @@ INDEX VERSION 1.127+C:\Users\ILUXONCHIK\Documents\GitHub\Android-General-Repo\An
 2622096549.index
 879916238.index
 1085815466.index
-4147855254.index
 2676985419.index
 2151188178.index
 686195399.index

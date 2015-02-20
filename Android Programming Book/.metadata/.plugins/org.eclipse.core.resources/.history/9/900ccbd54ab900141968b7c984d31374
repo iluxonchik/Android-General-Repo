@@ -25,9 +25,7 @@ public class AudioPlayer {
 			// the method below needs context to make sense of the resource ID
 			mPlayer = MediaPlayer.create(c, R.raw.one_small_step);
 		}
-		
 		mPlayer.start();
-		mPlayerIsPaused = false;
 		
 		mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 			

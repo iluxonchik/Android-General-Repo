@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class HelloMoonFragment extends Fragment {
 
-	private AudioPlayer mPlayer = new AudioPlayer();
+	private AudioPlayer mPlayer;
 	private Button mPlayButton;
 	private Button mStopButton;
 	private Button mPauseButton;
@@ -17,8 +17,6 @@ public class HelloMoonFragment extends Fragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		// Retain the fragment on rotation
-		setRetainInstance(true);
 	}
 	
 	@Override
@@ -26,6 +24,8 @@ public class HelloMoonFragment extends Fragment {
 			Bundle savedInstanceState) {
 		// Inflate the layout
 		View v = inflater.inflate(R.layout.fragment_hello_moon, null);
+		
+		mPlayer = new AudioPlayer();
 		
 		// Get references to buttons
 		mPlayButton = (Button)v.findViewById(R.id.hellomoon_playButton);

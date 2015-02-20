@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class HelloMoonFragment extends Fragment {
 
-	private AudioPlayer mPlayer = new AudioPlayer();
+	private AudioPlayer 		mPlayer = new AudioPlayer();
 	private Button mPlayButton;
 	private Button mStopButton;
 	private Button mPauseButton;
